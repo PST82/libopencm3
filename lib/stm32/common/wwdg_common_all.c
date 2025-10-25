@@ -71,7 +71,7 @@ void wwdg_set_prescaler(uint32_t prescaler)
 {
 	uint32_t reg32 = WWDG_CFR;
 	reg32 &= ~(WWDG_CFR_WDGTB_MASK << WWDG_CFR_WDGTB_LSB);
-	reg32 |= prescaler;
+	reg32 |= (prescaler << WWDG_CFR_WDGTB_LSB);
 	WWDG_CFR = reg32;
 }
 
@@ -140,7 +140,8 @@ interrupt handler to prevent repeated interrupts.
 */
 void wwdg_clear_early_wakeup_interrupt_flag(void)
 {
-	WWDG_SR &= ~WWDG_SR_EWIF;
+	/* Write 0 to clear the EWIF flag */
+	WWDG_SR = 0;
 }
 
 /*---------------------------------------------------------------------------*/

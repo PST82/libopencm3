@@ -67,15 +67,6 @@ specific memorymap.h header before including this header file.*/
 /** WDGTB[8:7]: Timer base */
 #define WWDG_CFR_WDGTB_LSB		7
 #define WWDG_CFR_WDGTB_MASK		0x3
-/** @defgroup wwdg_prescaler WWDG Prescaler
-@ingroup wwdg_defines
-
-@{*/
-#define WWDG_CFR_WDGTB_CK_DIV1		(0x0 << WWDG_CFR_WDGTB_LSB)
-#define WWDG_CFR_WDGTB_CK_DIV2		(0x1 << WWDG_CFR_WDGTB_LSB)
-#define WWDG_CFR_WDGTB_CK_DIV4		(0x2 << WWDG_CFR_WDGTB_LSB)
-#define WWDG_CFR_WDGTB_CK_DIV8		(0x3 << WWDG_CFR_WDGTB_LSB)
-/**@}*/
 
 /** W[6:0]: 7-bit window value */
 #define WWDG_CFR_W_LSB			0
