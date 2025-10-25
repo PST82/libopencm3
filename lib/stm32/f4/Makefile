@@ -58,6 +58,7 @@ OBJS += iwdg_common_all.o
 OBJS += lptimer_common_all.o
 OBJS += ltdc_common_f47.o
 OBJS += pwr_common_v1.o pwr.o
+OBJS += wwdg_common_all.o
 OBJS += rcc_common_all.o rcc.o
 OBJS += rng_common_v1.o
 OBJS += rtc_common_l1f024.o rtc.o

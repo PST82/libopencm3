@@ -46,6 +46,7 @@ OBJS += i2c_common_v1.o
 OBJS += iwdg_common_all.o
 OBJS += lcd.o
 OBJS += pwr_common_v1.o pwr_common_v2.o
+OBJS += wwdg_common_all.o
 OBJS += rcc.o rcc_common_all.o
 OBJS += rtc_common_l1f024.o
 OBJS += spi_common_all.o spi_common_v1.o spi_common_v1_frf.o

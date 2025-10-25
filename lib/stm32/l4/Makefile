@@ -55,6 +55,7 @@ OBJS += spi_common_all.o spi_common_v2.o
 OBJS += timer_common_all.o
 OBJS += usart_common_all.o usart_common_v2.o
 OBJS += quadspi_common_v1.o
+OBJS += wwdg_common_all.o
 
 OBJS += usb.o usb_control.o usb_standard.o usb_msc.o
 OBJS += usb_hid.o
