@@ -66,6 +66,8 @@ reaches the WWDG down-counter.
 - WWDG_CFR_WDGTB_CK_DIV2: PCLK1 / 4096 / 2
 - WWDG_CFR_WDGTB_CK_DIV4: PCLK1 / 4096 / 4
 - WWDG_CFR_WDGTB_CK_DIV8: PCLK1 / 4096 / 8
+
+@note Use only the predefined WWDG_CFR_WDGTB_CK_DIVn macros as values.
 */
 void wwdg_set_prescaler(uint32_t prescaler)
 {
@@ -137,10 +139,14 @@ void wwdg_enable_early_wakeup_interrupt(void)
 
 Clears the early wakeup interrupt flag. This must be called in the WWDG
 interrupt handler to prevent repeated interrupts.
+
+Note: The WWDG_SR register only contains the EWIF flag (bit 0), and all other
+bits are reserved. Writing 0 clears the flag as per STM32 reference manuals.
 */
 void wwdg_clear_early_wakeup_interrupt_flag(void)
 {
-	/* Write 0 to clear the EWIF flag */
+	/* Write 0 to clear the EWIF flag. This is the documented method
+	 * in STM32 reference manuals for clearing the EWIF bit. */
 	WWDG_SR = 0;
 }
 
