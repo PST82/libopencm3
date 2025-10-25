@@ -78,6 +78,6 @@
 
 /* --- WWDG function prototypes---------------------------------------------- */
 
-/* TODO */
+#include <libopencm3/stm32/common/wwdg_common_all.h>
 
 #endif

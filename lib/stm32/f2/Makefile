@@ -46,6 +46,7 @@ OBJS += hash_common_f24.o
 OBJS += i2c_common_v1.o
 OBJS += iwdg_common_all.o
 OBJS += rcc.o rcc_common_all.o
+OBJS += wwdg_common_all.o
 OBJS += rng_common_v1.o
 OBJS += rtc_common_l1f024.o
 OBJS += spi_common_all.o spi_common_v1.o spi_common_v1_frf.o
